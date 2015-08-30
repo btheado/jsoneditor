@@ -1,0 +1,5 @@
+title: $:/plugins/btheado/jsoneditor/readme
+
+In Tiddlywiki, automatically generate html forms from JSON Schema files using [[JSONEditor|https://github.com/jdorn/json-editor]]
+
+[[Source code|https://github.com/btheado/jsoneditor]]

@@ -1,0 +1,22 @@
+{
+  "tiddlers": [
+    {
+      "file": "jsoneditor.min.js",
+      "prefix": "if($tw.browser){\n",
+      "suffix": "\n}",
+      "fields": {
+        "type": "application/javascript",
+        "title": "$:/plugins/btheado/jsoneditor/jsoneditor.js",
+        "module-type": "library"
+      }
+    },
+    {
+      "file": "lodash.min.js",
+      "fields": {
+        "type": "application/javascript",
+        "title": "$:/plugins/btheado/jsoneditor/lodash.js",
+        "module-type": "library"
+      }
+    }
+  ]
+}
