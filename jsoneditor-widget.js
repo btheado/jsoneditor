@@ -59,6 +59,12 @@ JSONEditorWidget.prototype.addSaveJsonCallback = function() {
   this.editor.off("change", this.cb);
   this.editor.on("change", function() {self.saveJson();}); // autosave changes
 }
+JSONEditorWidget.prototype.getTextContent = function() {
+  var dom = document.createElement("div");
+  this.makeChildWidgets();
+  this.renderChildren(dom);
+  return dom.textContent;
+}
 JSONEditorWidget.prototype.getOptionsFromAttributes = function() {
   this.computeAttributes();
   var options = {};
@@ -72,7 +78,13 @@ JSONEditorWidget.prototype.getOptionsFromAttributes = function() {
   if (schema) {
     options.schema = JSON.parse(this.wiki.getTextReference(schema, "{}", this.getVariable("currentTiddler")));
   } else {
-    options.schema = {};
+    var schemaText = this.getTextContent();
+    console.log(schemaText);
+    if (schemaText != "") {
+      options.schema = JSON.parse(schemaText);
+    } else {
+      options.schema = {};
+    }
   }
 
   // The TextReference in the jsonOutput attribute indicates where to store the
