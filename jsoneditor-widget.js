@@ -95,6 +95,12 @@ JSONEditorWidget.prototype.getOptionsFromAttributes = function() {
   if(jsons) {
     options.startval = JSON.parse(jsons);
   }
+
+  // Allow the theme to be specified
+  var theme = this.getAttribute("theme");
+  if (theme) {
+    options.theme = theme;
+  }
   return options;
 }
 JSONEditorWidget.prototype.refresh = function(changedTiddlers) {
