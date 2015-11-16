@@ -3,6 +3,7 @@
     "description": "JSONEditor: Generate html forms from JSON schema",
     "author": "Brian Theado",
     "version": "0.0.1",
+    "list": "readme usage",
     "core-version": ">=5.0.8",
     "source": "https://github.com/btheado/jsoneditor",
     "plugin-type": "plugin"
